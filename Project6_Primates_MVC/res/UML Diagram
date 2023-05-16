@@ -1,0 +1,41 @@
+           +------------------+       +-----------------+
+           |    Monkey        |       |   Housing       |
+           +------------------+       +-----------------+
+           |  -name: String   |       |  <<interface>>  |
+           |  -species: Enum  |       | -removeMonkey() |
+           |  -sex: Enum      |       | -getMonkeys()   |
+           |  -size: Enum     |       +-----------------+
+           |  -weight: double |
+           |  -age: int       |
+           |  -favFood: Enum  |
+           +------------------+
+                    ^
+                    |
+                    |
+        +-----------+-----------+
+        |                       |
++----------------+    +------------------+
+|   Isolation    |    |     Enclosure    |
++----------------+    +------------------+
+| -monkeys: Monkey[] |  | -species: Species |
+| +addMonkey()       |  | -monkeys: Monkey[]|
++------------------+  | +addMonkey()      |
+                      | +removeMonkey()   |
+                      | +getMonkeys()     |
+        |
+        |              +------------------+
+        |
+        |                      |
+        +-----------+-----------+
+                     |
+                     |
+
+          +--------------------+
+          |      Sanctuary     |
+          +--------------------+
+          | -isolation: Isolation |
+          | -enclosures: Enclosure[] |
+          +--------------------+
+          | +getIsolation(): Isolation |
+          | +getEnclosures(): Enclosure[] |
+          +--------------------+
